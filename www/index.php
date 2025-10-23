@@ -7,9 +7,14 @@
 <body>
 <div align="center">
   <br/>
+  <h1>
 <?php
-echo("Hello, Word");
-?>
+echo("Hello World!");
+?></h1>
+<hr/>
+<p>I am the "index.php" file</p>
+<p>I am in the "www" folder</p>
+  
 </div>
 </body>
 </html>
