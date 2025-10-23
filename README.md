@@ -5,6 +5,10 @@ Develop desktop GUI applications using PHP, HTML5, JavaScript and CSS (Windows o
 ```
 $url = "https://github.com/pedrosdl/PHP-Desktop/archive/refs/heads/main.zip"
 Invoke-WebRequest -Uri $url -OutFile "PHP-Desktop.zip" -UseBasicParsing
-Expand-Archive -Path "PHP-Desktop.zip" -DestinationPath "." -Force
-Invoke-Item "./PHP-Desktop-main"
+Expand-Archive -Path "PHP-Desktop.zip" -DestinationPath "./" -Force
+Invoke-Item ".\PHP-Desktop-main"
+$WshShell = New-Object -ComObject WScript.Shell
+$Shortcut = $WshShell.CreateShortcut("Desktop\Start [ www ].lnk")
+$Shortcut.TargetPath = "$env:USERPROFILE\PHP-Desktop-main\Start [ www ].exe"
+$Shortcut.Save()
 ```
