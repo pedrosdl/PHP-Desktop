@@ -7,3 +7,5 @@ $url = "https://github.com/pedrosdl/PHP-Desktop/archive/refs/heads/main.zip"
 Invoke-WebRequest -Uri $url -OutFile "PHP-Desktop.zip" -UseBasicParsing
 Expand-Archive -Path "PHP-Desktop.zip" -DestinationPath "./" -Force
 Invoke-Item ".\PHP-Desktop-main"
+```
+teste
